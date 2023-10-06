@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução JS</title>
+</head>
+
+<body>
+    <h1>Introdução JavaScript</h1>
+
+    <p>No JS será explicado de forma mais pragmática qual a função de cada coisa. O JS funciona dando alvo em algo para
+        então criar algum efeito. <br>
+        Pode alterar conteúdo HTML (exemplo 1), alterar conteúdo CSS (exemplo 2). JS, diferente das outras duas
+        linguagens, não é marcação ou estilização, mas sim de programação.
+    </p>
+
+    <p id="demo">Exemplo: <br>
+        O id "demo" foi adicionado nesse p, então ao clicar no botão, essa explicação será alterada.
+        <br>
+        &lt;button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'&gt;Click
+        Me!&lt;/button&gt;<br>
+    </p>
+
+    <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+
+    <hr>
+
+    <p>JavaScript pode alterar a estilização.</p>
+
+    <p id="demo2">
+        Aqui estarei alterando a fonte ao clicar no botão abaixo. <br>
+        &lt;button type="button" onclick="document.getElementById('demo2').style.fontSize='35px'"&gt;Click
+        Me!&lt;/button&gt;</p>
+
+    <button type="button" onclick="document.getElementById('demo2').style.fontSize='35px'">Click Me!</button>
+
+    <hr>
+
+    <h3>A tag script</h3>
+
+    <p>&lt;script&gt;&lt;/script&gt; <br>
+        É a tag usada geralmente no final do body para fazer o script, mas pode ser colocado no head também ou até
+        inline. Contudo, a melhor forma é fazer JS externo se não for algo muito pequeno. <br>
+        <br>
+        O Js externo é usado &lt;script src="myScript.js"&gt;&lt;/script&gt;
+    </p>
+
+
+</body>
+
+</html>

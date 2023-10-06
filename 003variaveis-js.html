@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis JS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        tr:first-child {
+            font-weight: bold;
+            background-color: rgb(202, 202, 202);
+        }
+
+        tr td:first-child {
+            font-weight: bold;
+            background-color: rgb(202, 202, 202);
+        }
+
+        tr,
+        td {
+            border: solid black 1px;
+            padding: 10px;
+        }
+
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            background-color: rgb(236, 236, 236);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Variáveis JS</h1>
+
+    <p>Falando sobre: <br>
+        var <br>
+        let <br>
+        const</p>
+
+    <p>var: <br>
+        Passou a ser menos usada após 2015 por bons programadores, por sua menor especificação em comparação às outras,
+        podendo criar pequenos erros semânticos, mas não de programação.
+    </p>
+
+    <hr>
+
+    <p>let: <br>
+        Diferente de var, o let tem escopo de bloco, instrução ou expressão. Não são globais ou de escopo de função.
+    </p>
+
+    <ol>
+        <li>Diferente ed var, elas tem um escopo de bloco, instrução ou expressão. Não são globais ou escopo de função.
+            O escopo bloco { let x = 5;} não pode ser acessado fora dele, então se um escopo for criado, o let de dentro
+            dele não será validado.</li>
+        <li>Não podem ser redeclaradas. Por exemplo: declarar "let x = 5;" e mais além declarar "let x = 10;" (a não ser
+            que saia do escopo)</li>
+        <li>Devem ser declaradas antes do uso.</li>
+    </ol>
+
+    <hr>
+
+    <p>const: <br>
+        São valores constantes e portanto inalterados. <br>
+        const price1 = 5; <br>
+        const price2 = 6; <br>
+        let total = price1 + price2; <br>
+        document.getElementById("demo").innerHTML =
+        "The total is: " + total;
+    </p>
+
+    <p>Nota: Como pode ser visto, também é possível concatenar uma string com um number, contudo isso transforma o
+        number em string.</p>
+
+    <p>Quando usar o const? <br>
+        nova matriz, novo objeto, nova função, novo RegExp (serão melhor abordados mais pra frente).</p>
+
+    <hr>
+
+    <p style="background-color: antiquewhite;">Quando usar var, let ou const? <br>
+        1. Sempre declare variáveis <br>
+        2. Sempre use const se o valor não deve ser alterado <br>
+        3. Sempre use constse o tipo não deve ser alterado (Arrays e Objetos) <br>
+        4. Só use letse não puder usarconst <br>
+        5. Use apenas varse você DEVE oferecer suporte a navegadores antigos.</p>
+
+    <hr>
+
+    <p>Declarando uma variável vazia: <br>
+        var carName; <br>
+        Com isso a declaração é automaticamente "undefined", sendo preciso colocar o siinal de igual (=) para atribuir
+        algum valor.
+    </p>
+
+    <hr>
+
+    <p>Nota: Embora não seja obrigatório terminar com o ponto e vírgula, ele é altamente recomendado, assim reforçando a
+        questão da clareza e limpeza do código. No caso de fazer em uma única linha, apenas uma vírgula é necessária na
+        declaração, por exemplo: let x = 5, y = 2, z = 3;</p>
+
+    <hr>
+
+    <h4>Hoisting</h4>
+
+    <p>É o comportamento padrão de JS de mover as declarações para o topo de seu escopo antes da execução do código.</p>
+
+    <hr>
+
+    <p>Resumindo:</p>
+
+    <table>
+        <tr>
+            <td></td>
+            <td>Escopo:</td>
+            <td>Redeclaração?</td>
+            <td>reatrubuir?</td>
+            <td>Hoisting?</td>
+        </tr>
+        <tr>
+            <td>var</td>
+            <td>não</td>
+            <td>sim</td>
+            <td>sim</td>
+            <td>sim</td>
+        </tr>
+        <tr>
+            <td>let</td>
+            <td>sim</td>
+            <td>não</td>
+            <td>sim</td>
+            <td>não</td>
+        </tr>
+        <tr>
+            <td>const</td>
+            <td>sim</td>
+            <td>não</td>
+            <td>não</td>
+            <td>não</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

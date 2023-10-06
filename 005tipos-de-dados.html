@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Dados</title>
+</head>
+
+<body>
+    <h1>Tipos de dados</h1>
+
+    <p>Javascript possui 8 tipos de dados:</p>
+
+    <ul>
+        <li>string</li>
+        <div>letras, palavras ou frases, até números, mas tudo deverá ser escrito entre áspas duplas ou simples.</div>
+        <li>number</li>
+        <div>números inteiros, quebrados (usar ponto ao invés de vírgula), exponenciais (123e-5 para 0.00123). Também
+            existe NaN e infinidade, que será melhor abordado em um arquivo próprio.</div>
+        <li>bigint</li>
+        <div>É um formato para armazenar valores inteiros grandes demais para serem representados por um JS normal, por
+            exemplo: <br>
+            let x = BigInt('112345567890123456789023456789')
+        </div>
+        <li>boolean</li>
+        <div>verdadeiro ou falso</div>
+        <li>undefined</li>
+        <div> let x; (indefinido), tudo aquilo que não for definido cairá aqui. Podendo até ser atribuído o valor
+            udefined, como em let y = undefined; <br>
+            undefined é o valor primitivo utilizado quando uma variável não teve valor algum atribuído.</div>
+        <li>null</li>
+        <div>ausência intencional de valor, por exemplo, em um objeto = {} é equivalente a null.</div>
+        <li>object</li>
+        <div>
+            <ol>
+                <li>objeto</li>
+                <li>array</li>
+                <li>date</li>
+            </ol>Esses três referidos serão melhores explicados em seus próprios arquivos.
+        </div>
+    </ul>
+
+    <p>Nota: Muitos daqui serão melhor abordados ou aprofundados em seus próprios arquivos.</p>
+
+    <hr>
+
+    <h3>typeof</h3>
+
+    <p>É usado para saber qual tipo de variável ou expressão está sendo usada/trabalhada. Por exenplo: <br>
+        Com typeof ("nome") o retorno será string. <br>
+        Com typeof (15) o retorno será number.
+    </p>
+</body>
+
+</html>
