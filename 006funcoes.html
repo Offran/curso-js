@@ -10,35 +10,261 @@
 <body>
     <h1>Funções</h1>
 
+    <h4>Declaração de uma função</h4>
+
+    <p>function functionName (parâmetros){ <br>
+        execução do código <br>
+        }</p>
+
     <hr>
 
-    <p>Exemplo de uma função: <br> <br>
-        function myFunction(p1, p2) { <br>
-        return p1 * p2; <br>
-        } <br>
+    <h4>Expressões de funções</h4>
 
-        let result = myFunction(4, 3); <br>
-        document.getElementById("demo").innerHTML = result; <br>
+    <p>const x = function (a, b) {return a * b}; <br>
+        document.getElementById("demo").innerHTML = x;</p>
+
+    <p>Após a expressão de função ter sido armazenada em uma variável, a variável pode ser usada como uma função: <br>
+        <br>
+
+        let z = x(4, 3); <br>
+        (Isso retornará 12, a (4) e b(3)).
     </p>
 
-    <p id="demo"></p>
+    <hr>
+
+    <h4>Funções são objetos</h4>
+
+    <p>O typeofoperador em JavaScript retorna “função” para funções.</p>
 
     <hr>
 
-    <h4>Sintaxe da função JS</h4>
 
-    <p></p>
+    <h4>Função de auto invocação</h4>
 
-    <!-- ------------------------------------------------------------------- -->
+    <p>(function () { <br>
+        document.getElementById("demo").innerHTML = "Hello! I called myself"; <br>
+        })();</p>
 
-    <script>
-        function myFunction(p1, p2) {
-            return p1 * p2;
-        }
+    <p>Essa função se auto chama, automaticamente após sua declaração.</p>
 
-        let result = myFunction(4, 3);
-        document.getElementById("demo").innerHTML = result;
-    </script>
+    <hr>
+
+    <h4>Funções de seta</h4>
+
+    <p>As funções de seta permitem uma sintaxe curta para escrever expressões de função. <br>
+        Você não precisa da functionpalavra-chave, da returnpalavra-chave e das chaves .<br>
+        Pode ser feito da seguinte maneira: <br><br>
+        const x = (x, y) => x * y; <br>
+        document.getElementById("demo").innerHTML = x(5, 5);
+    </p>
+
+    <p>Nota: funções de seta não possuem hoisting, assim sendo necessária sua implementação antes de sua chamada. <br>
+        Só pode omitir o return se for uma única instrução, então é interessante manter o uso do return. <br>
+        const x = (x, y) => {return x * y;}
+    </p>
+
+    <hr>
+
+    <h4>Parâmetros de função JS</h4>
+
+    <p>function funçãoNome (parametro1, parametro2, parametro3) { <br>
+        // código <br>
+        }</p>
+
+    <p>Se uma função for chamada e faltar argumentos os valores serão definidos como undefined: <br>
+        function myFunction(x, y) { <br>
+        if (y === undefined) { <br>
+        y = 2; <br>
+        } <br>
+        } <br>
+        document.getElementById("demo").innerHTML = myFunction(4); <br><br>
+        Resultado: 8
+    </p>
+
+    <p>Os parâmetros de uma função podem ser padronizados (caso não sejam definidos): <br>
+        function myFunction(x, y = 10) { <br>
+        return x + y; <br>
+        } <br>
+        myFunction(5); <br> <br>
+        Resultado: 15
+    </p>
+
+    <hr>
+
+    <h4>Invocando uma função</h4>
+
+    <p>function myFunction(a, b) { <br>
+        return a * b; <br>
+        } <br>
+        myFunction(10, 2); <br><br>
+        Isso retornará 20.</p>
+
+    <hr>
+
+    <h4>this</h4>
+
+    <p>"this" refere-se a um objeto. A palavra-chave "this" depende de como é usada:</p>
+
+    <ul>
+        <li>Em um método de objeto, refere-se ao objeto.</li>
+        <li>Sozinho, "this" refere-se ao objeto global.</li>
+        <li>Em uma função, "this" refere-se ao objeto global.</li>
+        <li>Em um evento, "this" refere-se ao elemento que recebeu o evento.</li>
+        <li>Métodos como call(), apply()e bind()podem se referir "this" a qualquer objeto.</li>
+    </ul>
+
+    <p style="background-color: antiquewhite;">Nota: Um objeto global em JavaScript é um objeto que pode ser acessado de
+        qualquer lugar no código, já que está
+        disponível em todo o escopo.</p>
+
+    <p>call() é um método JS predefinido. Pode ser usado para chamar um método com um objeto proprietário como
+        parâmetro.</p>
+
+    <p>const person = { <br>
+        fullName: function() {<br>
+        return this.firstName + " " + this.lastName;<br>
+        }<br>
+        }<br><br>
+        const person1 = {<br>
+        firstName:"John",<br>
+        lastName: "Doe"<br>
+        }<br><br>
+        const person2 = {<br>
+        firstName:"Mary",<br>
+        lastName: "Doe"<br>
+        }<br><br>
+
+        // Isso irá retornar "John Doe":<br>
+        person.fullName.call(person1);</p>
+
+    <p style="font-weight: bold;">Aplicando o método call() com argumentos:</p>
+
+    <p>const person = { <br>
+        fullName: function(city, country) {<br>
+        return this.firstName + " " + this.lastName + ", " + city + ", " + country;<br>
+        }<br>
+        }<br><br>
+
+        const person1 = {<br>
+        firstName:"John",<br>
+        lastName: "Doe"<br>
+        }<br><br>
+
+        const person2 = {<br>
+        firstName:"Mary",<br>
+        lastName: "Doe"<br>
+        }<br><br>
+
+        document.getElementById("demo").innerHTML = person.fullName.call(person1, "Oslo", "Norway"); <br><br>
+        //Isso irá retornar John Doe, Oslo, Norway</p>
+
+    <p style="font-weight: bold;">Aplicando o método apply() com argumentos:</p>
+
+    <p>A única diferença dele para o método call() é a aplicação de um array. Comparando-o com o código acima, a
+        diferença seria na chamada da função: <br>
+        document.getElementById("demo").innerHTML = person.fullName.apply(person1, ["Oslo", "Norway"]); <br> <br>
+        Isso obteria o mesmo resultado.
+    </p>
+
+    <p style="font-weight: bold;">Aplicando o método bind() com argumentos:</p>
+
+    <p>O método bind() faz um objeto poder pegar emprestado um método de outro objeto, por exemplo:</p>
+
+    <p>const person = { <br>
+        firstName:"John",<br>
+        lastName: "Doe",<br>
+        fullName: function () {<br>
+        return this.firstName + " " + this.lastName;<br>
+        }<br>
+        }<br><br>
+
+        const member = {<br>
+        firstName:"Hege",<br>
+        lastName: "Nilsen",<br>
+        }<br><br>
+
+        let fullName = person.fullName.bind(member);</p>
+
+    <p>O bind também serve para evitar erros que podem ocasionar em undefined. Por exemplo:</p>
+
+    <p>Com setTimeout(variavel.nomeDaFuncao, 3000), a função perde o "this". <br>
+        Nesse caso, aplica-se setTimeout(variavel.nomeDaFuncao.bind(variavel), 3000), assim não perdendo a função no
+        processo.</p>
+
+    <hr>
+
+    <h4>Invocando uma função como método</h4>
+
+    <p>Aqui um exemplo de uma função atrelada diretamente a um objeto. Invocar uma função como um método de objeto faz
+        com que o valor dee this seja o própprio objeto.
+        <br><br>const myObject = { <br>
+        firstName:"John",<br>
+        lastName: "Doe",<br>
+        fullName: function() {<br>
+        return this.firstName + " " + this.lastName;<br>
+        }<br>
+        }<br>
+        document.getElementById("demo").innerHTML = myObject.fullName();
+    </p>
+
+    <hr>
+
+    <h4>Invocando funções com um construtor de objeto</h4>
+
+    <p>Usando a palavra "new" da seguinte forma pode ser criado um objeto: <br><br>
+        function myFunction(arg1, arg2) { <br>
+        this.firstName = arg1;<br>
+        this.lastName = arg2;<br>
+        }<br>
+        <br><br>
+        // Exemplo de criação de novo objeto: <br>
+        const myObj = new myFunction("John", "Doe");<br><br>
+
+        // Vai retornar "John"<br>
+        myObj.firstName;
+    </p>
+
+    <hr>
+
+    <h4>Todas as funções são métodos</h4>
+
+    <p>Se uma função não é um método de um objeto JS, é uma função de objeto global (a janela do navegador da web).
+        Nesse exemplo abaixo a propriedade fullName() é um método. Aqui "this" refere-se ao objeto em que a função está
+        inserida.</p>
+
+    <p>const myObject = { <br>
+        firstName:"John",<br>
+        lastName: "Doe",<br>
+        fullName: function() {<br>
+        return this.firstName + " " + this.lastName;<br>
+        }<br>
+        }<br>
+        document.getElementById("demo").innerHTML = myObject.fullName();</p>
+
+    <hr>
+
+    <h4>Funções aninhadas de JS</h4>
+
+    <p>É possível aninhar uma função dentro de outra, usando o exemplo do contador.</p>
+
+    <p>const add = (function () { <br>
+        let counter = 0;<br>
+        return function () {counter += 1; return counter;}<br>
+        })();<br><br>
+
+        function myFunction(){<br>
+        document.getElementById("demo").innerHTML = add();<br>
+        }</p>
+
+    <p style="background-color: antiquewhite;">Nota: Essas funções foram aplicadas em um botão: <br> <br>
+        &lt;button type="button" onclick="myFunction()"&gt;Count!&lt;/button&gt;
+    </p>
+
+    <hr>
+
+    <h4>Hoisting nas funções</h4>
+
+    <p>As funções podem ser chamadas antes de serem declaradas, pois o hoisting é aplicado a elas.</p>
 </body>
 
 </html>
