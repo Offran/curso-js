@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções 2</title>
+    <style>
+        p#corDeFundo {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Funções 2</h1>
+
+    <!-- Foi feito um segundo html de funções para abordar o assunto novamente, pois o estudo não foi completamente compreendido. -->
+    <ul>
+        <li>Funções são blocos de códigos reutilizáveis</li>
+        <div>Ou seja, podemos evitar a repetição da lógica em um programa em diversas partes do código.</div>
+        <li>A função precisa ser invocada para ser executada</li>
+        <div>Veremos na prática.</div>
+    </ul>
+
+    <hr>
+
+    <h4>Chamando uma função sem parâmetros</h4>
+
+    <p>function primeiraFuncao(){<br>
+        console.log("Hello World das funções"); <br>
+        } <br> <br>
+        primeiraFuncao(); <br> <br>
+
+        Dessa forma eu criei a função e chamei ela uma vez.
+    </p>
+
+    <hr>
+
+    <h4>Chamando uma função com parâmetro</h4>
+
+    <p>function dizerNome(nome){<br>
+        console.log("O nome é: " + nome); <br>
+        } <br> <br>
+        dizerNome("Franco"); <br><br>
+
+        O resultado será: "O nome é Franco"
+    </p>
+
+    <p id="corDeFundo">Nota: O parâmetro aqui é como uma variável, podendo ser qualquer nome,
+        isso facilita na compreensão do código, indicando qual deve ser o parâmetro passado. <br>
+        É possível que uma variável seja um parâmetro também, por exemplo: Se eu possuo a variável x = "Felipe" e coloco
+        como um parâmetro, essa função irá retornar "O nome é Felipe".</p>
+
+    <hr>
+
+    <h4>Chamando uma função com dois parâmetros</h4>
+
+    <p>function soma(a, b){ <br>
+        let soma = a + b; <br>
+        return soma; <br>
+        } <br><br>
+
+        let soma1 = soma(2, 3); <br><br>
+
+        console.log(soma1); <br><br>
+
+        O resultado será 5. <br>
+        Novamente os parâmetros "a" e "b" são apenas exemplos, poderiam ser x e y.
+    </p>
+
+    <p>Poderia também imprimir dessa forma: <br><br>
+        console.log(soma(4, 5)); <br><br>
+
+        E imprimir o valor sem atribuir à uma variável.
+    </p>
+
+    <p id="corDeFundo">Nota: A questão do return se dá pelo fato de eu atribuir parâmetros (valores)e esperar o retorno
+        a partir deles na função.</p>
+</body>
+
+</html>

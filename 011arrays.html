@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays/Matrizes</title>
+</head>
+
+<body>
+    <h1>Arrays/Matrizes JS</h1>
+
+    <p>Se tiver uma lista de itens (lista de nomes de carros, por exemplo), armazenar os carros em variáveis únicas
+        seria assim: <br><br>
+        let car1 = "Volvo"; <br>
+        let car2 = "BMW"<br>
+        let car3 = "Ferrari" <br><br>
+        Agora imagine que tenhamos uma lista com 300 carros ao invés de 3?? A solução é um array. <br>
+        Uma matriz pode conter muitos valores sob um único nome e você pode acessar os valores referindo-se a um número
+        de índice.
+    </p>
+
+    <hr>
+
+    <h4>Criando uma matriz</h4>
+
+    <p>Usar um array literal é a maneira mais fácil de criar a matriz. <br><br>
+        sintaxe: <br>
+        const arrayName = [item1, item2, item3...]; (podem ter quebras de linhas entre os itens se o programador
+        quiser). <br><br>
+
+        Você também pode criar um array e fornecer depois os elementos: <br>
+        const cars = [];<br>
+        cars[0]= "Ferrari";<br>
+        cars[1]= "Volvo";<br>
+        cars[2]= "BMW";
+    </p>
+
+    <hr>
+
+    <h4>Acessando elementos do array</h4>
+
+    <p>Você acessa o elemento do array referindo-se ao número do índice: <br><br>
+        const cars = ["Ferrari", "Volvo", "BMW"];<br>
+        let car = cars[0];<br><br>
+        Retornará Ferrari.</p>
+
+    <hr>
+
+    <h4>Lidando com arrays</h4>
+
+    <p>Alterando um elemento de array:<br><br>
+        const cars = ["Ferrari", "Volvo", "BMW"]; <br>
+        cars[0] = "Chevette";<br><br>
+        Resultará na troca de "ferrari" por "Chevette"</p>
+
+    <p>Convertendo array em uma string: <br><br>
+        cars.toString(); <br><br>
+        Caso solicitada a string resultará: Ferrari,Volvo,BMW
+    </p>
+
+    <p>Acessando o array completo: <br><br>
+        const cars = ["Ferrari", "Volvo", "BMW"]; <br>
+        .innerHTML = cars;<br><br>
+        Chamando dessa forma resultará: Ferrari,Volvo,BMW
+    </p>
+
+    <hr>
+
+    <h4>Matrizes são objetos</h4>
+
+    <p>Matrizes são um tipo especial de objetos. O typeof operador em JS retorna "objeto" para arrays. <br>
+        Objetos usam nomes pra acessar seus "membros": pessoa.primeiroNome retorna Franco <br>
+        Arrays usam números para acessar seus "membros": pessoa[0] retorna Franco</p>
+
+    <p>Elementos da matriz podem ser objetos. <br><br>
+        Variáveis JS podem ser objetos. Matrizes são tipos especiais de objetos. Por conta disso, você pode ter
+        variáveis de tipos diferentes no mesmo array. <br>
+        É possível ter funções, objetos e arrays em um array. <br><br>
+        myArray[0] = Date.now;<br>
+        myArray[1] = myFunction;<br>
+        myArray[2] = myCars;</p>
+
+    <hr>
+
+    <h4>A propriedade do comprimento</h4>
+
+    <p>A length propriedade de um array retorna o comprimento de um array (o número de elementos do array). <br><br>
+
+        const fruits = ["banana", "laranja", "manga"];<br>
+        let tamanhoDoArray = fruits.length; <br><br>
+
+        Retornará 3.
+    </p>
+
+    <p>Pela propriedade length podemos acessar diretamente o último número da matriz, independente de quantos ela tiver:
+        <br><br>
+
+        fruits[fruits.length - 1];
+    </p>
+
+    <p>Ainda com a length propriedade: <br>
+        Pode-se usar um "for" para percorrer a matriz. (for será explicado mais à frente). <br>
+        Ou usar o método forEach()<br>
+    </p>
+
+    <hr>
+
+    <h4>Adicionando elementoa à matriz</h4>
+
+    <p>Para adicionar elementos no array é só usar o método push(). <br>
+        const fruits = ["Banana", "Orange", "Apple"]; <br>
+        fruits.push("Lemon"); <br><br>
+
+        Retornará ["Banana", "Orange", "Apple", "Lemon"];
+    </p>
+
+    <p id="nota">
+        const fruits = ["Banana", "Orange", "Apple"];<br>
+        fruits[6] = "Lemon"; // Isso criará um elemento undefined nos buracos não preenchidos.
+    </p>
+
+    <hr>
+
+    <h4>Quando usar matrizes e quando usar objetos</h4>
+
+    <p>Você deve usar objetos quando quiser que os nomes dos elementos sejam strings. <br>
+        Você deve usar arrays quando quiser que os nomes dos elementos sejam números.</p>
+
+    <hr>
+
+    <h4>Métodos das matrizes/arrays</h4>
+
+    <p>Existem outros métodos, maiores detalhes sobre os métodos estão <a
+            href="https://www.w3schools.com/js/js_array_methods.asp">aqui</a>.
+    </p>
+
+    <hr>
+
+    <p id="nota">Nota final: É usado const nas matrizes para definir uma referência constante para aquela matriz, mas
+        isso não significa que ela será uma constante, visto que pode ser atribuída ou modificada usando seus métodos.
+    </p>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 30px;
+    background-color: aquamarine;
+}
+
+h1,
+.centralizacao,
+input {
+    text-align: center;
+    margin: 10px;
+}
+
+#subtitle{
+    font-size: 1.2em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+div.centralizaBloco{
+    margin-left: 30em;
+}
+
+input:hover {
+    background-color: hsl(160, 50%, 50%);
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+input {
+    border-radius: 3px;
+    padding: 3px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.centraliza {
+    text-align: center;
+}
+
+section#notas {
+    background-color: antiquewhite;
+    padding: 20px;
+    width: 600px;
+    margin: auto;
+}

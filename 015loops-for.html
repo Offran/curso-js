@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops for</title>
+    <style>
+        p#nota {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>loops for</h1>
+
+    <p>Os loops podem exxecutar um bloco de código várias vezes. <br>
+        Diferentes tipos de loops:</p>
+
+    <ul>
+        <li>for</li>
+        <div>Percorre um bloco de código várias vezes</div>
+        <li>for/in</li>
+        <div>Percorre as propriedades de um objeto</div>
+        <li>for/of</li>
+        <div>Percorre os valores de um objeto iterável</div>
+        <li>while</li>
+        <div>Percorre um bloco de código enquanto uma condição específica é verdadeira</div>
+        <li>do/while</li>
+        <div>Também percorre um bloco de código enquanto uma condição especificada é verdadeira, porém ele entra no
+            código ao menos uma vez, mesmo se a informação nunca tiver sido verdadeira</div>
+    </ul>
+
+    <hr>
+
+    <h4>O ciclo "for"</h4>
+
+    <p>for (let i = 0; i &lt; 5; i++) { <br>
+        text += "The number is " + i + "&lt;br&gt;";<br>
+        }</p>
+
+    <p>No exemplo acima, você pode ler: <br>
+        A expressão 1 define uma variável antes do início do loop (seja i = 0). <br>
+        A expressão 2 define a condição para a execução do loop (i deve ser menor que 5). <br>
+        A expressão 3 aumenta um valor (i++) cada vez que o bloco de código no loop é executado.</p>
+
+    <hr>
+
+    <h4>Escopo do código</h4>
+
+    <p>let i = 5; <br><br>
+
+        for (let i = 0; i &lt; 10; i++) {<br>
+        // código<br>
+        }<br><br>
+
+        // Resultado é 5</p>
+
+    <p>var i = 5; <br><br>
+
+        for (let i = 0; i &lt; 10; i++) {<br>
+        // código<br>
+        }<br><br>
+
+        // Resultado é 10</p>
+
+    <p id="nota">Nota: Isso se dá pelo fato de que o var redeclara a variável.</p>
+
+    <hr>
+
+    <h4>Percorrendo um array</h4>
+
+    <p>const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"]; <br> <br>
+
+        let text = ""; <br>
+        for (let i = 0; i &lt; cars.length; i++) { <br>
+        text += cars[i] + "&lt;br&gt;"; <br>
+        } <br> <br>
+
+        document.getElementById("demo").innerHTML = text;</p>
+
+    <p>O iterador "i" é igual a zero, enquanto i for menor que o tamanho de "cars", percorre um valor. <br>
+        Lembrando que acessando valores é a forma de percorrer um array. Esse código retornará do primeiro ao último
+        elemento do array.</p>
+
+    <p>Também pode ser feito: <br><br>
+
+        const cars = ["BMW", "Volvo", "Saab", "Ford"]; <br>
+        let i = 2;<br>
+        let len = cars.length;<br>
+        let text = "";<br>
+
+        for (; i &lt; len; i++) {<br>
+        text += cars[i] + "&lt;br&gt;";<br>
+        }<br><br>
+
+        document.getElementById("demo").innerHTML = text; <br><br><br>
+
+        Isso resultará em "Saab" e "Ford", pois começa em 2 (Saab). Além disso, note que foi excluída a parte inicial,
+        por ter sido optado fazer antes de iniciar o for, ainda assim manteve o ponto e vírgula.</p>
+
+    <hr>
+
+    <h4>O loop for in</h4>
+
+    <p>A instrução JavaScript for in percorre as propriedades de um objeto: <br> <br>
+
+        Sintaxe: <br><br>
+        for (key in object) { <br>
+        // código <br>
+        }</p>
+
+    <p>Exemplo: <br><br>
+
+        const person = {fname:"John", lname:"Doe", age:25}; <br>
+
+        let txt = ""; <br>
+        for (let x in person) { <br>
+        txt += person[x] + " "; <br>
+        } <br><br>
+
+        document.getElementById("demo").innerHTML = txt; <br><br>
+
+        Resultado: John Doe 25
+    </p>
+
+    <p>Explicação:</p>
+
+    <ol>
+        <li>O loop for in itera sobre um objeto "person".</li>
+        <li>Cada iteração retorna uma key (x);</li>
+        <li>A key é usada para acessar o valor dela</li>
+        <li>O valor da chave é person[x]</li>
+    </ol>
+
+    <p>for (variável in array) { <br>
+        //código <br>
+        }</p>
+
+    <p id="nota">Não use for in em um array se a ordem do índice for importante. <br>
+        Caso a ordem seja importante é melhor usar um for, for of ou Array.forEach() método.</p>
+
+    <hr>
+
+    <h4>Array forEach()</h4>
+
+    <p>const numbers = [45, 4, 9, 16, 25]; <br><br>
+
+        let txt = "";<br>
+        numbers.forEach(myFunction);<br>
+        document.getElementById("demo").innerHTML = txt;<br><br>
+
+        function myFunction(value, index, array) {<br>
+        txt += value + "&lt;br&gt;"; <br>
+        }</p>
+
+    <p>Observe que a função leve 3 argumentos: <br><br>
+
+        O valor do item <br>
+        O índice do item <br>
+        O próprio array</p>
+
+    <hr>
+
+    <h4>O loop for of</h4>
+
+    <p>A instrução JavaScript for of percorre os valores de um objeto iterável. <br>
+        Sintaxe: <br><br>
+
+        for (variable of iterable) { <br>
+        // código <br>
+        }</p>
+
+
+
+
+</body>
+
+</html>

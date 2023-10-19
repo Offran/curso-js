@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+    <style>
+        p#nota {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Objetos de data JS</h1>
+
+    <p>Saída de data JS <br><br>
+
+        O JS tem o padrão de usar o fuso horário do navegador e exibir uma data e hora como uma sequência de texto
+        completa. </p>
+
+    <p>new Date() <br>
+        new Date(date string) <br> <br>
+
+        new Date(year,month) <br>
+        new Date(year,month,day) <br>
+        new Date(year,month,day,hours) <br>
+        new Date(year,month,day,hours,minutes) <br>
+        new Date(year,month,day,hours,minutes,seconds) <br>
+        new Date(year,month,day,hours,minutes,seconds,ms)</p>
+
+    <p id="nota">Nota: Como os meses começam no 0, eles vão até 11, logo o mês 11 é dezembro, não novembro e o mês 1 é
+        fevereiro, não janeiro.</p>
+
+    <hr>
+
+    <p>const x = new Date(); <br>
+        Dessa forma, sem argumentos, cria um objeto de data com a data e hora atuais:</p>
+
+    <p id="dataAtual"></p>
+
+    <p>Ou pode ser modificada a data: <br>
+        const y = new Date("2022-03-25");
+    </p>
+
+    <p id="dataFixa"></p>
+
+    <hr>
+
+    <h4>Métodos da data</h4>
+
+    <p>Existem outros métodos, maiores detalhes sobre os métodos estão <a
+            href="https://www.w3schools.com/js/js_date_methods.asp">aqui</a> e <a
+            href="https://www.w3schools.com/js/js_date_methods_set.asp">aqui</a>.
+    </p>
+
+    <script>
+        const x = new Date();
+        const y = new Date("2023-10-13");
+        document.getElementById("dataAtual").innerHTML = x;
+        document.getElementById("dataFixa").innerHTML = y;
+    </script>
+</body>
+
+</html>

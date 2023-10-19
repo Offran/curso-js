@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number</title>
+    <style>
+        p#nota {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Números</h1>
+
+    <p>Os números podem ser escrito com ou sem decimais em JS. <br> <br>
+        let x = 3.14; <br>
+        let y = 4;</p>
+
+    <p>Número extra grandes ou pequenos podem ser escritos com notação científica: <br>
+        let x = 123e5; (12300000) <br>
+        let y = 123e-5 (0.000123)
+    </p>
+
+    <p>Os números em JS tem precisão de até 15 dígitos: <br>
+        let x = 99999999999999 (preciso)<br>
+        let y = 999999999999999 (aqui fica impreciso e erra o valor)</p>
+
+    <p>A aritimética do float (ponto flutuante) nem sempre é 100% precisa. <br>
+        let x = 0.2 + 0.1; <br>
+        0.2 + 0.1 = 0.30000000000000004 <br><br>
+        Para resolver esse problema deve-se multiplicar e dividir: <br>
+        let x = (0.2 * 10 + 0.1 * 10) / 10;
+    </p>
+
+    <hr>
+
+    <h4>Números em string</h4>
+
+    <p>Ao adicionar números em string é preciso colocar entre áspas. <br>
+        let x = "20" <br>
+        let y = "10" <br><br>
+        E quando se somam strings ao invés de soma, é uma concatenação. <br><br>
+        let z = x + y; <br>
+        O resultado de z = xy <br><br>
+        Isso acontecerá mesmo se um deles não for uma string, ele será interpretado como uma ao ser somado com uma
+        string.
+    </p>
+
+    <p id="nota">Isso é só para soma, todas as outras opções (multiplicação, divisão e subtração) funcionam normalmente,
+        pois como apenas a concatenação tem o mesmo sinal da adição, as outras são automaticamente convertidas para
+        number ao invés de gerar esse problema.</p>
+
+    <hr>
+
+    <h4>NaN = Not a Number</h4>
+
+    <p>NaN é uma palavra reservada em JS que indica que um número não é um número legal/legítimo. Tentar fazer
+        aritimética com uma string não numérica resultará em NaN (não é um número). <br><br>
+        let x = 100 / "apple"; <br>
+        resultado: x = NaN
+    </p>
+
+    <p>Pode ser usado a função JS isNaN() para descobrir se um valor é um número: <br><br>
+
+        let x = 100 / "apple"; <br>
+        isNaN(x);<br><br>
+        Vai retornar "true", pois não é categorizado como número.
+    </p>
+
+    <p id="nota">Nota: NaN em um cálculo forçará o resultado a ser NaN. <br>
+        typeof NaN; retorna number.</p>
+
+    <hr>
+
+    <h4>infinity</h4>
+
+    <p>
+        É o resultado de um cálculo acima do maior número possível. <br>
+        typeof infinity retorna um number. <br>
+        divisão por 0 gera infinity;
+    </p>
+
+    <hr>
+
+    <h4>Métodos dos números:</h4>
+
+    <ul>
+        <li>toString()</li>
+        <div>retorna o número como string. <br><br></div>
+        <li>toExponential()</li>
+        <div>Retorna o número como notação exponencial. <br><br></div>
+        <li>toFixed()</li>
+        <div>Retorna o número com um número de decimais.</div>
+        <li>toPrecision()</li>
+        <div>Retorna um número escrito com um comprimento especificado.</div>
+        <li>Number()</li>
+        <div>Converte para number.</div>
+    </ul>
+
+    <p>Existem outros métodos, maiores detalhes sobre os métodos estão <a
+            href="https://www.w3schools.com/js/js_number_methods.asp">aqui</a>.
+    </p>
+
+    <hr>
+
+    <h4>Propriedades dos números</h4>
+
+    <p>As propriedades são usadas para representar algumas questões de numbers, por exemplo: <br><br>
+
+        number.MAX_SAFE_INTERGER mostrará o maior número inteiro seguro de JS.</p>
+
+    <p>Existem outras propriedades, maiores detalhes sobre as propriedades estão <a
+            href="https://www.w3schools.com/js/js_number_properties.asp">aqui</a>.</p>
+
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While e Do/while</title>
+</head>
+
+<body>
+    <h1>O loop while</h1>
+
+    <p>O while loop percorre um bloco de código enquanto uma condição especificada for verdadeira. <br>
+        Sintaxe: <br><br>
+
+        while (condition) { <br>
+        // código <br>
+        }</p>
+
+    <p>Exemplo: <br><br>
+
+        let i = 1; <br><br>
+
+        while (i &lt; 10) { <br>
+        text += "&lt;br&gt;The number is " + i; <br>
+        i++; <br>
+        }
+    </p>
+
+    <p>Esse código acima fará um contador ir de 1 até 9.</p>
+
+    <hr>
+
+    <h4>While pode ser usado para percorrer um array</h4>
+
+    <p>const cars = ["BMW", "Volvo", "Saab", "Ford"];<br><br>
+
+        let i = 0; <br>
+        let text = "";<br>
+        while (cars[i]) {<br>
+        text += cars[i] + "&lt;br&gt;";<br>
+        i++;<br>
+        } <br><br>
+
+        document.getElementById("demo").innerHTML = text;
+    </p>
+
+    <hr>
+
+    <h4>O loop do while</h4>
+
+    <p>O do while é uma variante do while. Este loop executará o bloco de código uma vez antes de verificar se a
+        condição é verdadeira, sendo essa sua diferença.</p>
+
+    <hr>
+
+    <h4>Usando break em loops</h4>
+
+    <p>A instrução break pode ser usada para sair de um loop: <br><br>
+
+        let text = "";<br>
+        for (let i = 0; i &lt; 10; i++) {<br>
+        if (i === 3) { break; }<br>
+        text += "The number is " + i + "&lt;br&gt;";<br>
+        }<br><br>
+
+        document.getElementById("demo").innerHTML = text; <br><br>
+
+        O resultado disso é que o código irá ser um contador até o número 2.
+    </p>
+
+    <hr>
+
+    <h4>Usando continue declaração em loops</h4>
+
+    <p>
+        A instrução continue pode ser usada para interromper um loop e voltar após o ponto onde foi interrompida:
+        <br><br>
+
+        let text = "";<br>
+        for (let i = 0; i &lt; 10; i++) {<br>
+        if (i === 3) { continue; }<br>
+        text += "The number is " + i + "&lt;br&gt;";<br>
+        }<br><br>
+        document.getElementById("demo").innerHTML = text; <br><br>
+        O resultado disso é que o código irá ser um contador até o número 2, pular o 3 e então continuar no 4+.
+    </p>
+
+    <hr>
+
+    <h4>Usando break em um array, exemplo prático</h4>
+
+    <p>const cars = ["BMW", "Volvo", "Saab", "Ford"]; <br>
+        let text = "";<br><br>
+
+        list: {<br>
+        text += cars[0] + "&lt;br&gt;"; <br>
+        text += cars[1] + "&lt;br&gt;"; <br>
+        break list;<br>
+        text += cars[2] + "&lt;br&gt;"; <br>
+        text += cars[3] + "&lt;br&gt;"; <br>
+        }<br><br>
+
+        document.getElementById("demo").innerHTML = text; <br><br>
+
+        O resultado disso será uma lista com apenas os dois primeiros
+    </p>
+
+
+</body>
+
+</html>

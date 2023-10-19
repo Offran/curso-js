@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <style>
+        p#nota {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Strings</h1>
+
+    <p>Uma string JS contém zero ou mais caracteres escritos entre áspas. Por exemplo: <br><br>
+        let string = "Franco"; <br>
+    </p>
+
+    <p id="nota">Nota: Podem ser usadas áspas simples ou duplas. <br>
+    </p>
+
+    <hr>
+
+    <h4>Comprimento da string</h4>
+
+    <p>let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";<br>
+        let length = text.length; <br><br>
+        Essa propriedade calcula quantos caracteres estão na string, espaços também são contados, então se eu separar um
+        espaço entre o A e o B o resultado será 27.<br>
+        O resultado disso será 26.</p>
+
+    <hr>
+
+    <h4>Escrevendo nas strings</h4>
+
+    <p>Podem ser usadas áspas dentro de uma string, desde que elas não correspondam às aspas ao redor da string (let
+        citacao = "Let's go.";) ou (let citacao2 = 'Vou usar "aquilo"')<br>
+        Observe que sempre é modificado o tipo de áspas a ser usado.</p>
+
+    <p>Caso o usuário queira manter as mesmas áspas então deve usar uma barra invertida "\". <br>
+        Exemplos: <br>
+        \' resulta em '. <br>
+        \" resulta em ". <br>
+        \\ resulta em \. <br> <br>
+        Isso significa que para ser corretamente usado deve ficar dessa forma: <br>
+        let citacao = "Que \"merda\" você tá falando?!" <br><br>
+        No caso da barra invertida, cada duas barras invertidas resultarão em uma, por exemplo: <br>
+        \\\\ -> resulta em \\ na string.
+    </p>
+
+    <p id="nota">Nota: Caso queira fazer uma única variável com uma string concatenada a ela mesma, isso também é
+        possível. Exemplo: <br>
+        (let nome = "Franco Schneider";) é o mesmo que (let nome = "Franco" + "Schneider";)</p>
+
+    <hr>
+
+    <h4>Literais de modelo JS</h4>
+
+    <p>Literais modelos usam crase para definir uma string: <br><br>
+        let exemplo = `Hello World!`;
+    </p>
+
+    <p id="nota">Nota: Usando a crase é permitido multilinhas para uma string.</p>
+
+    <p>As cráses permitem citações de outras variáveis de forma mais dinâmica: <br>
+        let firstName = "John"; <br>
+        let lastName = "Doe"; <br>
+        let idade = 12; <br>
+        <br><br>
+        let text = `Welcome ${firstName} ${lastName}, de ${idade} anos!`;
+    </p>
+
+    <p>Usando o modelo literal é possível até mesmo ajustar o JS dentro dele. <br> <br>
+        let price = 10; <br>
+        let VAT = 0.25; <br>
+        let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;</p>
+
+    <p id="nota">A substituição automática de variáveis por valores reais é chamada de interpolação de strings.</p>
+
+    <hr>
+
+    <h4>Colocando variáveis em strings</h4>
+
+    <p>É possível colocar variáveis em strings da seguinte forma: <br><br>
+        let header = "Templates Literals";<br>
+        let tags = ["template literals", "javascript", "es6"];<br><br>
+
+        let html = `
+        &lt;h2&gt;${header}&lt;/h2&gt;
+        &lt;ul&gt;`;&lt;brgt;
+        for (const x of tags) {<br>
+        html += `&lt;li&gt;${x}&lt;/li&gt;`;<br>
+        } <br><br>
+
+        html += `&lt;/ul&gt;`;
+    </p>
+
+    <hr>
+
+    <h4>Strings como objetos</h4>
+
+    <p>Strings podem ser criadas como objetos usando: <br>
+        let x = new String ("Franco";), porém não é recomendado criar objetos string, pois complica o código e diminui a
+        velocidade de execução.</p>
+
+    <hr>
+
+    <p id="nota"><a href="https://www.w3schools.com/jsref/jsref_obj_string.asp">Referência completa de string com
+            propriedades e métodos aqui.</a></p>
+
+</body>
+
+</html>

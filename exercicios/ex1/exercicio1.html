@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex1 - Cálculo IMC</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 style="text-shadow: 3px 3px 5px rgb(248, 248, 248);">EX1 - Cálculo IMC</h1>
+
+    <main>
+        <section>
+            <p class="titulo" style="text-shadow: 2px 2px 5px red;">Proposta: <br> <br></p>
+            <p>
+                O IMC é reconhecido como padrão internacional para avaliar o grau de sobrepeso e obesidade. É calculado
+                dividindo o peso (em kg) pela altura ao quadrado (em metros). <br>
+                IMC = Peso ÷ (Altura x Altura) <br> <br>
+                Obtenha o valor do peso em KG e da altura em metros, realize o cálculo e apresente ao usuário (de acordo
+                com tabela abaixo): <br>
+                Menor que 18,5 = abaixo do peso. <br>
+                Entre 18,5 e 24,9 = peso normal. <br>
+                Entre 25 e 29,9 = sobrepeso. <br>
+                Entre 30 e 34,99 = obesidade grau I. <br>
+                Entre 35 e 39,99 = obesidade grau II (severa). <br>
+                Acima de 40 = obesidade grau III (mórbida). <br>
+            </p>
+        </section>
+        <section>
+            <p class="titulo" style="text-shadow: 2px 2px 5px green;">Exercício resolvido <br><br></p>
+            <div>
+                <label>Digite seu peso:</label>
+                <input type="number" id="peso">
+
+                <br>
+
+                <label>Digite sua altura:</label>
+                <input type="number" id="altura">
+
+                <input class="button" type="button" value="botao" onclick="imc()">
+            </div>
+
+            <p id="resposta"></p>
+        </section>
+    </main>
+
+    <section id="notas">
+        <p>Anotações:</p>
+        <ol>
+            <li>CSS: Não consegui ajustar o peso e altura input verticalmente.</li>
+            <li style="color: green;"></li>
+            <li>CSS: Precisei improvisar um "main" para ajustar o display, não entendi o motivo disso.</li>
+            <li style="color: green;">O body não possui altura deefinida naturalmente, assim sendo uma opção criar um container para ajustar o flex.</li>
+            <li>JS: Não consegui trabalhar com a função com parâmetros. Embora eu tenha entendido, não pratiquei e não
+                consegui executar fora do console.log</li>
+        </ol>
+    </section>
+
+</body>
+
+</html>

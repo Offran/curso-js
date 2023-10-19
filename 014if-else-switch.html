@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if-else-switch</title>
+    <style>
+        p#nota {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>if-else e switch</h1>
+
+    <p>if e else podem ser lidos como "se" e "se não"</p>
+
+    <ol>
+        <li>Use if para especificar um bloco de código a ser executado, se uma condição especificada for verdadeira</li>
+        <li>Use else para especificar um bloco de código a ser executado, se a mesma condição for falsa</li>
+        <li>Use else if para especificar uma nova condição a ser testada, se a primeira condição for falsa</li>
+        <li>Use switch para especificar muitos blocos alternativos de código a serem executados</li>
+    </ol>
+
+    <p>Sintaxes completas de if e else: <br><br>
+
+        if(condição){ <br>
+        //bloco de código caso a condição seja verdadeira. <br>
+        } else if (condição2) { <br>
+        //bloco de código caso a condição 2 seja verdadeira. <br>
+        } else { <br>
+        //bloco de código caso nenhuma das condições anteriores seja verdadeira. <br>
+        }
+    </p>
+
+    <p id="nota">Nota: É preciso sempre cuidar e testar para verificar possíveis erros ou se a condição 1 pode ser
+        pulada corretamente para a condição 2 e assim por diante. É muito comum esquecer um detalhe e algumas vezes o
+        código parar na condição 1 em momentos imprevistos. A sintaxe pode não estar errada, mas o programador esquecer
+        de detalhes que acabam dando o resultado incorreto para o que se espera do código.</p>
+
+    <hr>
+
+    <h4>switch</h4>
+
+    <p>A switch é a instrução para selecionar uma das muitas opções de código a serem executadas: <br><br>
+
+        switch(expression) { <br>
+        case x: <br>
+        // bloco de código <br>
+        break; <br>
+        case y: <br>
+        // bloco de código <br>
+        break; <br>
+        default: <br>
+        // bloco de código <br>
+        }</p>
+
+    <p>É assim que funciona: <br><br>
+
+        A expressão switch é avaliada uma vez. <br>
+        O valor da expressão é comparado com os valores de cada caso. <br>
+        Se houver uma correspondência, o bloco de código associado será executado. <br>
+        Se não houver correspondência, o bloco de código padrão (default) será executado.</p>
+
+    <p>Exemplo: <br>
+        O getDay() método retorna o dia da semana como um número de 0 a 6. <br>
+        Domingo=0, Segunda=1... <br>
+        O exemplo abaixo demonstra uma forma de aplicação do switch com base nisso:</p>
+
+    <p>let day; <br>
+        switch (new Date().getDay()) {<br>
+        case 0:<br>
+        day = "Sunday";<br>
+        break;<br>
+        case 1:<br>
+        day = "Monday";<br>
+        break;<br>
+        case 2:<br>
+        day = "Tuesday";<br>
+        break;<br>
+        case 3:<br>
+        day = "Wednesday";<br>
+        break;<br>
+        case 4:<br>
+        day = "Thursday";<br>
+        break;<br>
+        case 5:<br>
+        day = "Friday";<br>
+        break;<br>
+        case 6:<br>
+        day = "Saturday";<br>
+        }<br>
+        document.getElementById("demo").innerHTML = "Today is " + day;</p>
+
+    <p id="nota">break é a palavra do código usada para sair do bloco switch. Não é necessário interromper o bloco
+        final, pois ele termina sozinho após a leitura dele. <br>
+        Ao omitir a instrução break o próximo caso será executado mesmo que a avaliação não corresponda ao caso, então
+        ele é indispensável para evitar erros no código, apenas não sendo necessário no default.</p>
+
+        <p id="nota">default é a palavra chave para o padrão. Ela é o que acontecerá quando nenhuma das opções for válida.</p>
+</body>
+
+</html>

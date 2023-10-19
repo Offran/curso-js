@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemática</title>
+</head>
+
+<body>
+    <h1>Objeto matemático JS</h1>
+
+    <p>Math.PI retorna a razão entre a circunferência de um círculo e seu diâmetro. <br>
+        document.getElementById("demo").innerHTML = Math.PI;</p>
+
+    <p>Outros exemplos:</p>
+
+    <ul>
+        <li>Math.E</li>
+        <div>Retorna o número de Euler</div>
+        <li>Math.PI</li>
+        <div>Retorna pi</div>
+        <li>Math.SQRT2</li>
+        <div></div>
+        <li>Math.SQRT1_2</li>
+        <div></div>
+        <li>Math.LN2</li>
+        <div>Retorna o logarítimo natural de 2</div>
+        <li>Math.LOG2E</li>
+        <div>Retorna logarítmo de Euler na base 2</div>
+    </ul>
+
+    <P>Em resumo: A sintaxe para qualquer método Math é: Math.método(número)</P>
+
+    <hr>
+
+    <h4>Número para inteiro</h4>
+
+    <p>Quatro formas de arredondar o número:</p>
+
+    <ol>
+        <li>Math.round(n)</li>
+        <div>Arredonda para o inteiro mais próximo</div>
+        <li>Math.ceil(n)</li>
+        <div>Arredonda para o número inteiro maior mais próximo</div>
+        <li>Math.floor(n)</li>
+        <div>Arredonda para o número inteiro menor mais próximo</div>
+        <li>Math.trunk(n)</li>
+        <div>Retorna a parte inteira do número, sem arredondar (então sempre arredonda para baixo)</div>
+    </ol>
+
+    <hr>
+
+    <h4>Aleatório</h4>
+
+    <p>Math.random() retorna um número entre 0 (inconclusivo e 1 (exclusivo)), sendo sempre maior que 0 e menor que 1.
+    </p>
+
+    <p>Usando métodos matemáticos ensinados acima podemos criar um número inteiro aleatório: <br><br>
+
+        Math.ceil(math.random() *10);<br>
+        Retorna um inteiro entre 1 e 10.
+    </p>
+
+    <p>Usando uma função aleatória adequada <br><br>
+
+        Como você pode ver nos exemplos acima, pode ser uma boa ideia criar uma função aleatória adequada para usar
+        todos os fins de números inteiros aleatórios. <br>
+        Essa função JS sempre retorna um número aleatório entre 1 e 10.</p>
+
+    <p>function getRndInteger(min, max) {<br>
+        return Math.ceil(Math.random() * (max - min)) + min;<br>
+        } <br><br>
+
+        &lt;button onclick="document.getElementById('demo').innerHTML = getRndInteger(0,10)"&gt;Click Me&lt;/button&gt;
+        <br><br>
+
+        (Essa foi dificultada de graça, pois uma função sem parâmetros e multiplicada por 10 daria no mesmo).
+    </p>
+
+    <hr>
+
+    <p>Existem outros métodos, maiores detalhes sobre os métodos estão <a
+            href="https://www.w3schools.com/js/js_math.asp">aqui</a>.
+    </p>
+
+</body>
+
+</html>

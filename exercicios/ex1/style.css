@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(188, 134, 238, 0.8);
+}
+
+main {
+    display: flex;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+section#notas {
+    background-color: antiquewhite;
+    width: 80em;
+    margin: auto;
+    padding-left: 20px;
+}
+
+main section {
+    border-bottom: solid 2px black;
+    border-left: solid 2px black;
+    margin: 50px;
+    padding: 10px;
+    font-size: 1.1em;
+    width: 100vh;
+}
+
+p.titulo {
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+label {
+    width: 130px;
+    display: inline-block;
+}
+
+input {
+    margin-left: 10px;
+}
+
+input.button:hover {
+    cursor: pointer;
+}
+
+p#resposta {
+    padding-top: 20px;
+    text-align: center;
+    color: green;
+    font-weight: bolder;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conjuntos</title>
+    <style>
+        p#nota {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Conjuntos</h1>
+
+    <p>Um conjunto JavaScript é uma coleção de valores exclusivos. <br>
+        Cada valor só pode ocorrer uma vez em um Conjunto. <br><br>
+
+        Métodos de conjuntos essenciais:</p>
+
+    <ul>
+        <li>new Set()</li>
+        <div>Cria um novo conjunto</div>
+        <li>add()</li>
+        <div>Adiciona um novo elemento ao conjunto</div>
+        <li>delete()</li>
+        <div>Remove um elemento de um conjunto</div>
+        <li>has()</li>
+        <div>Retorna verdadeiro se existir um valor no conjunto</div>
+        <li>forEach()</li>
+        <div>Invoca um retorno de chamada para cada elemento do conjunto</div>
+        <li>values()</li>
+        <div>Retorna um iterador com todos os valores em um conjunto</div>
+        <li>size</li>
+        <div>Retorna o número de elementos em um conjunto</div>
+    </ul>
+
+    <hr>
+
+    <h4>Criando conjuntos e explorando métodos</h4>
+
+    <p>// Criando um new Set <br>
+        const letters = new Set(["a","b","c"]); <br><br>
+
+        // Exibição do tamanho de set <br>
+        document.getElementById("demo").innerHTML = letters.size;</p>
+
+    <p>Podemos adicionar letras com: <br><br>
+        letters.add("d"); <br><br>
+        Isso adicionaria a letra d no array.</p>
+
+    <p>Podemos também adicionar variáveis, ao criá-las e depois adicionar o conjunto dessa forma: <br>
+        letters.add(d); <br>
+        // Caso a variável d já exista.</p>
+
+    <p id="nota">Nota: Caso sejam adicionadas duas variáveis de mesmo nome apenas a primeira será válida.</p>
+
+    <hr>
+
+    <h4>Iterando com value()</h4>
+
+    <p>// Create a Set<br>
+        const letters = new Set(["a","b","c"]);<br><br>
+
+        // List all Elements<br>
+        let text = "";<br>
+        for (const x of letters.values()) {<br>
+        text += x + "&lt;br&gt;";<br>
+        }<br><br>
+
+        document.getElementById("demo").innerHTML = text;</p>
+
+    <p id="nota">Nota: values() é o método usado para iterar todos os valores do conjunto.</p>
+</body>
+
+</html>

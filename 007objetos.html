@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos JS</title>
+</head>
+
+<body>
+    <h1>Objetos</h1>
+
+    <p>Exemplificando: Objetos, propriedades e métodos da vida real. <br><br>
+
+        Um carro seria um objeto. <br>
+        Esse objeto tem suas propriedades, como peso e cor. <br>
+        Esse objeto tem métodos, como iniciar e parar.
+    </p>
+
+    <p>Todos os carros tem as mesmas propriedades (cor, peso, etc), mas os valores dessas propriedades diferem de carro
+        pra carro (vermelho, 300kg, etc). <br><br>
+
+        Todos os carros possuem os mesmos métodos, mas os métodos são executados em momentos diferentes.</p>
+
+    <p>Definição de um objeto: <br>
+        variável = {nome: valor;} <br>
+        const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};</p>
+
+    <hr>
+
+    <h4>Acessando propriedades do objeto</h4>
+
+    <p>Você pode acessar as propriedades do objeto de duas maneiras: <br>
+        objectName.propertyName <br>
+        ou <br>
+        objectName["propertyName"]</p>
+
+    <p>Exemplos: <br>
+        // Criando o objeto:<br>
+        const person = { <br>
+        firstName: "John",<br>
+        lastName : "Doe",<br>
+        id : 5566<br>
+        };<br><br>
+
+        // Exibindo alguns dos dados:<br>
+        document.getElementById("demo").innerHTML =<br>
+        person["firstName"] + " " + person["lastName"];<br><br>
+
+        // Exibindo outros dados:<br>
+        document.getElementById("demo").innerHTML =<br>
+        person.firstName + " " + person.id;
+    </p>
+
+    <hr>
+
+    <h4>Métodos de objeto</h4>
+
+    <p>Método é uma função armazenada como uma propriedade. <br>
+        Objetos também podem ter métodos. Métodos são ações que podem ser executadas em objetos.
+        Os métodos são armazenados em propriedades como definições de funções. <br>
+        Mais explicações em <a href="006funcoes.html">funções</a>.
+    </p>
+
+
+</body>
+
+</html>

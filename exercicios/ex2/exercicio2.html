@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2 - Adivinhe o nome</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>EX2 - Adivinhe o nome</h1>
+
+    <p class="centraliza" id="subtitle" style="text-shadow: 2px 2px 5px red;">Proposta: <br><br></p>
+
+    <div class="centralizaBloco">
+        <p>Exiba uma mensagem de boas vindas ao usuário e informe uma lista de 10 nomes. <br>
+            Dentre estes nomes, um você já terá com selecionado em seu sistema. <br>
+            Peça que o usuário adivinhe qual o nome escolhido, escolhendo uma das opções. <br> <br>
+            Caso ele escolha o nome correto, exiba a mensagem: <br>
+            “Parabéns, você venceu! Escolheu o nome correto.” <br><br>
+            Caso ele escolha o nome incorreto, exiba a mensagem: <br>
+            “Tente novamente mais tarde.”</p>
+    </div>
+
+    <hr>
+
+    <div class="centraliza">
+        <p id="subtitle" style="text-shadow: 2px 2px 5px green;">Bem vindo ao exercício! <br>
+            Escolha um nome entre os 10 propostos para saber qual é o correto para este exercício!</p>
+
+        <input type="button" value="Francisco" onclick="identifica(this.value)">
+        <input type="button" value="Fernando" onclick="identifica(this.value)">
+        <input type="button" value="Carol" onclick="identifica(this.value)">
+        <input type="button" value="Miguel" onclick="identifica(this.value)">
+        <input type="button" value="Arthur" onclick="identifica(this.value)">
+        <input type="button" value="Felipe" onclick="identifica(this.value)">
+        <input type="button" value="Franco" onclick="identifica(this.value)">
+        <input type="button" value="Lucas" onclick="identifica(this.value)">
+        <input type="button" value="Vilmar" onclick="identifica(this.value)">
+        <input type="button" value="Rejane" onclick="identifica(this.value)">
+    </div>
+
+    <section id="notas">
+        <p>Anotações:</p>
+        <ol>
+            <li>CSS/JS: Não consegui ajustar a cor da forma que eu gostaria, tive que improvisar algo que satura um
+                pouco o código. Optei por remover a cor no final, pois isso estava gerando duas mensagens. A de erro e a
+                de acerto.</li>
+            <li>JS: Não consegui trabalhar com a função com parâmetros para executar uma só função. Embora eu tenha
+                entendido, não pratiquei e não
+                consegui executar fora do console.log</li>
+            <li>CSS: margin: auto as vezes funciona e noutras não. Eu testei aqui nas anotações e em outras divs.</li>
+            <li style="color: green;">Margin auto funciona centralizando o elemento, caso o elemento não cubra toda largura, então não mudará nada. Para resolver isso um width foi criado.</li>
+        </ol>
+    </section>
+
+</body>
+
+</html>

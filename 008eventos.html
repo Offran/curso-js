@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos JS</title>
+</head>
+
+<body>
+    <h1>Eventos JS</h1>
+
+    <p>Eventos são "coisas" que acontecem aos elementos HTML. Os eventos JS "reagem" a esses eventos. <br>
+        Um evento HTML pode ser algo que o navegador ou o usuário faz, por exemplo:</p>
+
+    <ul>
+        <li>Uma página web terminou de carregar</li>
+        <li>Um botão foi clicado</li>
+        <li>Campo de entrada foi alterado</li>
+    </ul>
+
+    <p>JavaScript permite executar código quando eventos são detectados. <br>
+        HTML permite que atributos do manipulador de eventos, com código JS, sejam adicionados aos elementos HTML.</p>
+
+    <hr>
+
+    <p>Exemplos:</p>
+
+    <p>&lt;button onclick="document.getElementById('demo').innerHTML=Date()"&gt;The time is?&lt;/button&gt; <br><br>
+        Aqui é um evento onde, ao clicar, aparecerá a mensagem com a data e hora.</p>
+
+    <hr>
+
+    <p>
+        &lt;button onclick="this.innerHTML=Date()"&gt;The time is?&lt;/button&gt; <br><br>
+        Aqui é um exemplo de evento onde "this" está sendo usado para referir a si mesmo, então um evento onde modifica
+        o próprio elemento.
+    </p>
+
+    <hr>
+
+    <p>O mais comum são eventos criados a partir de funções: <br><br>
+        &lt;button onclick="displayDate()"&gt;The time is?&lt;/button&gt; <br><br>
+        function displayDate() { <br>
+        document.getElementById("demo").innerHTML = Date();<br>
+        } <br><br>
+        Aqui é um exemplo onde acontece assim como no primeiro exemplo, porém está fazendo uma ligação com o JS, não
+        diretamente inline.
+    </p>
+
+    <hr>
+
+    <h4>Aqui uma lista de alguns eventos comuns:</h4>
+
+    <ul>
+        <li>onclick</li>
+        <div>Ao clicar no elemento HTML.</div>
+        <li>onkendown</li>
+        <div>Ao usuário iniciar o click no elemento HTML.</div>
+        <li>onchange</li>
+        <div>Quando algum elemento HTML for alterado (por exemplo, determinado item em uma lista foi escolhido, como uma
+            cor de fundo e então a cor do site muda.)</div>
+        <li>onmouseover</li>
+        <div>O usuário move o mouse sobre o elemento HTML.</div>
+        <li>onmouseout</li>
+        <div>O usuário afasta o mouse do elemento HTML.</div>
+        <li>onload</li>
+        <div>Assim que o navegador terminou de carregar a página.</div>
+    </ul>
+
+</body>
+
+</html>
