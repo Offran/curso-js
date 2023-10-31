@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(199, 20, 20);
+}
+
+h1{
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    background-color: rgb(15, 15, 15);
+    color: rgb(235, 235, 235);
+    border: solid 2px white;
+}
+
+section.section1{
+    width: 40vw;
+    margin: auto;
+    padding: 20px;
+    border-left: solid 1px rgb(15, 15, 15);
+    border-right: solid 1px rgb(15, 15, 15);
+}
+
+div.option{
+    margin-left: 15vw;
+}
+
+section.porta{
+    display: flex;
+    width: 80vw;
+    margin: auto;
+}
+
+.porta:hover{
+    cursor: pointer;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+}
+
+input#button{
+    width: 45vw;
+    padding: 1px;
+    margin-left: 25vw;
+    border: solid 2px rgb(15, 15, 15);
+    background-color: rgb(235, 235, 235);
+    margin-bottom: 20px;
+}
+
+input#button:hover{
+    cursor: pointer;
+    background-color: rgb(15, 15, 15);
+    color: rgb(235, 235, 235);
+    border: solid 2px white;
+}
+
+div.nota{
+    width: 71vw;
+    background-color: bisque;
+    border: solid 1px black;
+    margin: auto;
+    padding: 3px 3px 3px 20px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 5 - Porta dos desesperados</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>EX 5 - Porta dos desesperados</h1>
+
+    <p class="title">Proposta </p>
+    <br>
+    <section class="section1">
+        <p>Construa um programa que exiba 6 opções para que o usuário escolha: <br> <br>
+        <div class="option">
+            1) Porta 1 <br>
+            2) Porta 2 <br>
+            3) Porta 3 <br>
+            4) Porta 4 <br>
+            5) Porta 5 <br>
+            6) Sair <br> <br>
+        </div>
+        Somente a porta 4 terá o prêmio e somente a porta 3 terá o monstro, as demais portas não terão nada e a opção 6
+        é de sair. <br>
+        O programa deve apresentar ao usuário uma tela para que escolha uma das portas até que ele encontro o prêmio
+        (exibindo “Você ficou milionário!”), o monstro (exibindo “Você foi devorado.”) ou escolhendo sair (“Você
+        desistiu de competir.”). <br>
+        Lembre-se que uma porta aberta não deve mais ser apresentada ao usuário.</p>
+    </section>
+
+    <p class="title">Exercício </p>
+    <br>
+
+    <section class="porta" id="portas">
+        <div><img id="porta-1"
+                src="https://pormade.vtexassets.com/arquivos/ids/155846/kit-porta-pronta-lisa-solida-preta.jpg?v=637799261927600000"
+                onclick="selecionaPorta(this.id)"></div>
+        <div><img id="porta-2" onclick="selecionaPorta(this.id)"
+                src="https://pormade.vtexassets.com/arquivos/ids/155846/kit-porta-pronta-lisa-solida-preta.jpg?v=637799261927600000">
+        </div>
+        <div><img id="porta-3" onclick="selecionaPorta(this.id)"
+                src="https://pormade.vtexassets.com/arquivos/ids/155846/kit-porta-pronta-lisa-solida-preta.jpg?v=637799261927600000">
+        </div>
+        <div><img id="porta-4" onclick="selecionaPorta(this.id)"
+                src="https://pormade.vtexassets.com/arquivos/ids/155846/kit-porta-pronta-lisa-solida-preta.jpg?v=637799261927600000">
+        </div>
+        <div><img id="porta-5" onclick="selecionaPorta(this.id)"
+                src="https://pormade.vtexassets.com/arquivos/ids/155846/kit-porta-pronta-lisa-solida-preta.jpg?v=637799261927600000">
+        </div>
+        <div><img id="porta-6" onclick="selecionaPorta(this.id)"
+                src="https://pormade.vtexassets.com/arquivos/ids/155846/kit-porta-pronta-lisa-solida-preta.jpg?v=637799261927600000">
+        </div>
+    </section>
+
+    <input id="button" type="button" value="Resetar Jogo" onclick="reset()">
+
+    <p id="resposta"></p>
+
+    <div class="nota">
+        <ol>
+            <li>CSS: Não consegui deixar corretamente alinhado a proposta, exercício e o botão, sendo que aparentemente todos estão centralizados.</li>
+            <li>CSS: Não consegui, nem com margin e nem com padding, fazer as partes vermelhas não serem clicáveis, sendo que elas não deveriam fazer parte das imagens.</li>
+        </ol>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual número</title>
+</head>
+
+<body>
+    <h1>Qual número</h1>
+
+    <p>Desenvolva uma função que receba um número como parâmetro e verifique se ele é par ou ímpar.</p>
+
+    <label>Digite seu número:</label>
+    <input type="text" id="numero">
+    <input type="button" value="validar" onclick="validar()">
+    <p id="resposta"></p>
+
+    <script>
+        function validar(parametro) {
+            let n = Number(document.getElementById("numero").value);
+            let resp = document.getElementById("resposta");
+            verificaParImpar(n, resp);
+        }
+
+        function verificaParImpar(numero, resposta) {
+            if (numero % 2 == 0) {
+                resposta.innerHTML = `é par`;
+            } else {
+                resposta.innerHTML = `é ímpar`;
+            }
+        }
+    </script>
+</body>
+
+</html>

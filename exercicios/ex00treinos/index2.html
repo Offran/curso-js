@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de temperatura</title>
+</head>
+
+<body>
+    <h1>Conversão de temperatura</h1>
+
+    <p>Escreva um script que pergunta ao usuário se ele deseja converter uma temperatura de grau Celsius para Farenheit
+        ou vice-versa. Para cada opção, crie uma função. Crie uma terceira, que é um menu para o usuário escolher a
+        opção desejada, onde esse menu chama a função de conversão correta.</p>
+
+    <label for="graus">Digite a temperatura:</label>
+    <input type="number" id="graus">
+
+    <label for="conversao">Escolha a conversão</label>
+    <select id="conversao">
+        <option value="ºC para ºF">ºC para ºF</option>
+        <option value="ºF para ºC">ºF para ºC</option>
+    </select>
+
+    <input type="button" value="Converter" onclick="trocaTemp()">
+
+    <p id="resultado"></p>
+
+    <script>
+        function CparaF(celsius) {
+            return (celsius * 9 / 5) + 32;
+        }
+
+        function FparaC(farenheit) {
+            return (farenheit - 32) * 5 / 9;
+        }
+
+        function trocaTemp() {
+            const temperatura = Number(document.getElementById("graus").value);
+            const opcao = document.getElementById("conversao").value;
+            let resultado;
+
+            if (opcao === "ºC para ºF") {
+                resultado = CparaF(temperatura);
+                document.getElementById("resultado").innerHTML = `${temperatura.toFixed(1)} graus C são equivalentes a ${resultado.toFixed(2)} gruas ºF`;
+            } else if (opcao === "ºF para ºC") {
+                resultado = FparaC(temperatura);
+                document.getElementById("resultado").innerHTML = `${temperatura.toFixed(1)} graus F são equivalentes a ${resultado.toFixed(2)} gruas ºC`;
+            }
+        }
+    </script>
+</body>
+</html>

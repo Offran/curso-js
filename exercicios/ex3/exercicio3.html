@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +8,38 @@
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>EX3 - Média Ponderada</h1>
 
-    <p>Proposta: <br><br></p>
+    <main>
+        <div class="bloco">
+            <p>Proposta: <br><br></p>
+            <p>Construa um programa que obtém 2 notas de um dado aluno e realiza a média ponderada.
+                Para média ponderada, considere que a nota1 terá peso 1 e a nota2 terá peso 2.
+                Caso a média esteja igual ou maior que 7, exiba:
+                “Parabéns, você foi aprovado!”
+                Caso a média seja menor que 7, exiba:
+                “Infelizmente você foi reprovado.”</p>
+        </div>
+        <div class="bloco">
+            <p>Exercício: <br><br></p>
+            <p>Digite suas notas:</p>
+            <label>Nota 1: </label> <input type="number" id="nota1">
+            <label>Nota 2: </label> <input type="number" id="nota2">
+            <input id="botao" type="button" value="Obter nota" onclick="calcularMedia()">
+            <p id="resposta"></p>
+        </div>
+    </main>
 
-    <p>Construa um programa que obtém 2 notas de um dado aluno e realiza a média ponderada.
-        Para média ponderada, considere que a nota1 terá peso 1 e a nota2 terá peso 2.
-        
-        Caso a média esteja igual ou maior que 7, exiba:
-        “Parabéns, você foi aprovado!”
-        
-        Caso a média seja menor que 7, exiba:
-        “Infelizmente você foi reprovado.”</p>
-
-        <p>Exercício</p>
-
-        <p>Digite suas notas:</p>
-
-        <label>Nota 1: <input type="number" id="nota1"></label>
-        <label>Nota 2: <input type="number" id="nota2"></label>
-        <input type="button" value="Obter nota" onclick="mediaPonderada()">
-
-        <p id="resposta"></p>
+    <div id="nota">
+        <ol>
+            <li>JS: Só consegui fazer o código como uma cascata. Tive problemas de bloquear um para então chamar o
+                outro.</li>
+            <li>JS/CSS: Ainda não consegui colocar cor no código, porém irei esperar até aprender sobre DOM, que parece
+                ser o caso.</li>
+        </ol>
+    </div>
 </body>
+
 </html>

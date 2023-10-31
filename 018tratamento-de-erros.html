@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de erro</title>
+    <style>
+        p.nota {
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tratamento de erro</h1>
+
+    <p>São estruturas para controle de fluxo, baseadas na ocorrência ou não de erros na execução de um bloco de código.
+        <br>
+        Dependendo da ocorrência ou não de algum erro, o fluxo é direcionado para um outro determinado bloco. <br><br>
+        As estruturas são:
+    </p>
+
+    <ul>
+        <li>try</li>
+        <div>Define um bloco de código a ser executado (para tentar).</div>
+        <li>catch</li>
+        <div>Define um bloco de código para lidar com qualquer erro.</div>
+        <li>finally</li>
+        <div>Define um bloco de código a ser executado independente do resultado.</div>
+        <li>throw</li>
+        <div>Define um erro personalizado.</div>
+    </ul>
+
+    <p>Erros vão acontecer. Ao executar um código poderão ocorrer diversos erros imprevistos, como entradas
+        imprevisíveis ou mesmo erros de codificação cometidos pelo programador.</p>
+
+    <hr>
+
+    <p>Exemplo 1: <br><br>
+
+        try { <br>
+        adddlert("Welcome guest!");<br>
+        }<br>
+        catch(err) {<br>
+        document.getElementById("demo").innerHTML = err.message;<br>
+        }<br><br>
+
+        O adddlert será capturado como um erro e executará o código catch para lidar com isso.
+    </p>
+
+    <hr>
+
+    <p>As instruções JavaScript tryvêm catch em pares: <br><br>
+
+        try {
+        Bloco de códigos para tentar
+        }
+        catch(err) {
+        Bloco de código para lidar com erros
+        }
+    </p>
+
+    <p>Exemplo 2: <br><br>
+
+        const message = document.getElementById("p01"); <br>
+        message.innerHTML = ""; <br>
+        let x = document.getElementById("demo").value; <br> <br>
+        try { <br>
+        if(x.trim() == "") throw "empty"; <br>
+        if(isNaN(x)) throw "not a number"; <br>
+        x = Number(x); <br>
+        if(x &lt; 5) throw "too low"; <br>
+        if(x &gt; 10) throw "too high"; <br>
+        } <br> <br>
+        catch(err) { <br>
+        message.innerHTML = "Input is " + err; <br>
+        }
+    </p>
+
+    <p class="nota">Nota: apesar disso, os navegadores modernos geralmente usam combinação de JS e html para regras de
+        validação. <br><br>
+        &lt;input type="number" min="5" max="10" step="1"&gt;
+    </p>
+
+    <hr>
+
+    <p>A finally instrução permite executar código, após try e catch, independentemente do resultado:</p>
+
+    <p>try {
+        Bloco de códigos para tentar
+        }
+        catch(err) {
+        Bloco de código para lidar com erros
+        }
+        finally {
+        Bloco de código a ser executado independentemente do resultado do try/catch
+        }</p>
+
+    <p>Exemplo 3: <br><br>
+
+        function myFunction() {<br>
+        const message = document.getElementById("p01");<br>
+        message.innerHTML = "";<br>
+        let x = document.getElementById("demo").value;<br><br>
+        try {<br>
+        if(x.trim() == "") throw "is empty";<br>
+        if(isNaN(x)) throw "is not a number";<br>
+        x = Number(x);<br>
+        if(x &gt; 10) throw "is too high";<br>
+        if(x &lt; 5) throw "is too low";<br>
+        }<br>
+        catch(err) {<br>
+        message.innerHTML = "Error: " + err + ".";<br>
+        }<br>
+        finally {<br>
+        document.getElementById("demo").value = "";<br>
+        }<br>
+        }
+    </p>
+
+    <hr>
+
+    <h4>O objeto de erro</h4>
+
+    <p>O JavaScript possui um objeto de erro integrado que fornece informações de erro quando ele ocorre. Esse objeto
+        possui duas propriedades: <br>
+        nome: define ou retorna um nome de erro. <br>
+        mensagem: define ou retorna uma mensagem de erro (string) <br><br>
+
+        Valores de nome de erro:</p>
+
+    <ul>
+        <li>EvalError</li>
+        <div>Ocorreu um erro na função eval()</div>
+        <li>RangeError</li>
+        <div>Ocorreu um número "fora do intervalo"</div>
+        <li>ReferenceError</li>
+        <div>Ocorreu uma referência "ilegal"</div>
+        <li>SyntaxError</li>
+        <div>Ocorreu um erro de sintaxe</div>
+        <li>TypeError</li>
+        <div>Ocorreu um erro de tipo</div>
+        <li>URIError</li>
+        <div>Ocorreu um erro em encodeURI()</div>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+</head>
+
+<body>
+    <h1>Calculo de média de 3 argumentos</h1>
+
+    <p>Faça um programa, com uma função que necessite de três argumentos, e que forneça a soma desses três argumentos
+        através de uma função. Seu script também deve fornecer a média dos três números, através de uma segunda função
+        que chama a primeira.</p>
+
+    <label>Digite abaixo seus valores:</label> <br>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <input type="number" id="num3"> <br>
+    <input type="button" value="Calcular média" onclick="media()">
+
+    <p id="resposta"></p>
+
+    <script>
+        function soma(valor1 = 0, valor2 = 0, valor3 = 0) {
+            let soma = valor1 + valor2 + valor3;
+            return soma;
+        }
+
+        function media() {
+            let n1 = Number(document.getElementById("num1").value);
+            let n2 = Number(document.getElementById("num2").value);
+            let n3 = Number(document.getElementById("num3").value);
+
+            let resultado = soma(n1, n2, n3) / 3;
+            document.getElementById("resposta").innerHTML = `A média dos valores é ${resultado}`;
+        }
+    </script>
+</body>
+
+</html>

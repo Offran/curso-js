@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 6 - Validação de dados</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>EX 6 - Validação de dados</h1>
+
+    <main>
+        <section>
+            <p id="title">Proposta</p>
+            <p>Você foi contratado para criar um formulário básico de inscrição para um concurso de talentos. Este
+                formulário
+                deve exigir apenas os campos nome, idade e e-mail. <br> <br>
+                Utilize as estruturas para tratamento de erros estudadas e crie uma função para validação dos dados
+                enviados e
+                apresentação dos erros ao usuário, sendo que: <br><br>
+                1. Nome não pode ser vazio e não pode ser numérico <br>
+                2. Idade não pode ser vazio e deve ser numérico <br>
+                3. E-mail não pode ser vazio e não pode começar com números <br><br>
+                Caso atendido os requisitos, apresentar a mensagem de cadastro realizado com sucesso e exibir os dados
+                em tela.
+                <br><br>
+                OBS: Não faremos ainda uma validação mais profunda de e-mail pois veremos isso em expressões regulares.
+            </p>
+        </section>
+
+        <section>
+            <p>Exercício</p>
+            <div>
+                <label for="nome">Digite seu nome:</label>
+                <input type="text" id="nome" placeholder="Franco Schneider">
+                <label id="respostaNome"></label>
+            </div>
+            <div>
+                <label for="idade">Digite sua idade:</label>
+                <input type="number" id="idade" placeholder="26">
+                <label id="respostaIdade"></label>
+            </div>
+            <div>
+                <label for="email">Digite seu email:</label>
+                <input type="text" id="email" placeholder="Franco@hotmail.com">
+                <label id="respostaEmail"></label>
+            </div>
+            <input type="button" value="Cadastrar" onclick="validacao()">
+        </section>
+    </main>
+
+    <div class="nota">
+        <ol>
+            <li>JS: Não consegui fazer o zero ser lido como algo que não seja o não preenchimento.</li>
+            <li>JS: Meu email não ficou perfeito, ele ainda pode acarretar em possíveis erros, pois ele aceita ponto
+                depois do arroba e qualifica como email aceitável.</li>
+        </ol>
+    </div>
+
+</body>
+
+</html>
