@@ -12,43 +12,51 @@
 <body>
     <h1>EX 6 - Validação de dados</h1>
 
+    <div class="titulos">
+        <p class="title1">Proposta</p>
+        <p class="title2">Exercício</p>
+    </div>
+
     <main>
         <section>
-            <p id="title">Proposta</p>
-            <p>Você foi contratado para criar um formulário básico de inscrição para um concurso de talentos. Este
-                formulário
-                deve exigir apenas os campos nome, idade e e-mail. <br> <br>
-                Utilize as estruturas para tratamento de erros estudadas e crie uma função para validação dos dados
-                enviados e
-                apresentação dos erros ao usuário, sendo que: <br><br>
-                1. Nome não pode ser vazio e não pode ser numérico <br>
-                2. Idade não pode ser vazio e deve ser numérico <br>
-                3. E-mail não pode ser vazio e não pode começar com números <br><br>
-                Caso atendido os requisitos, apresentar a mensagem de cadastro realizado com sucesso e exibir os dados
-                em tela.
-                <br><br>
-                OBS: Não faremos ainda uma validação mais profunda de e-mail pois veremos isso em expressões regulares.
-            </p>
+            <div>
+                <p>Você foi contratado para criar um formulário básico de inscrição para um concurso de talentos. Este
+                    formulário
+                    deve exigir apenas os campos nome, idade e e-mail. <br> <br>
+                    Utilize as estruturas para tratamento de erros estudadas e crie uma função para validação dos dados
+                    enviados e
+                    apresentação dos erros ao usuário, sendo que: <br><br>
+                    1. Nome não pode ser vazio e não pode ser numérico <br>
+                    2. Idade não pode ser vazio e deve ser numérico <br>
+                    3. E-mail não pode ser vazio e não pode começar com números <br><br>
+                    Caso atendido os requisitos, apresentar a mensagem de cadastro realizado com sucesso e exibir os
+                    dados
+                    em tela.
+                    <br><br>
+                    OBS: Não faremos ainda uma validação mais profunda de e-mail pois veremos isso em expressões
+                    regulares.
+                </p>
+            </div>
         </section>
 
         <section>
-            <p>Exercício</p>
             <div>
-                <label for="nome">Digite seu nome:</label>
+                <label class="base" for="nome">Digite seu nome:</label>
                 <input type="text" id="nome" placeholder="Franco Schneider">
                 <label id="respostaNome"></label>
             </div>
             <div>
-                <label for="idade">Digite sua idade:</label>
+                <label class="base" for="idade">Digite sua idade:</label>
                 <input type="number" id="idade" placeholder="26">
                 <label id="respostaIdade"></label>
             </div>
             <div>
-                <label for="email">Digite seu email:</label>
+                <label class="base" for="email">Digite seu email:</label>
                 <input type="text" id="email" placeholder="Franco@hotmail.com">
                 <label id="respostaEmail"></label>
             </div>
-            <input type="button" value="Cadastrar" onclick="validacao()">
+            <input type="button" value="Cadastrar" onclick="validacao()" class="button">
+            <p id="respostaFinal"></p>
         </section>
     </main>
 
@@ -56,7 +64,10 @@
         <ol>
             <li>JS: Não consegui fazer o zero ser lido como algo que não seja o não preenchimento.</li>
             <li>JS: Meu email não ficou perfeito, ele ainda pode acarretar em possíveis erros, pois ele aceita ponto
-                depois do arroba e qualifica como email aceitável.</li>
+                depois do arroba e qualifica como email aceitável.
+            </li>
+            <li>CSS: Os heigth dos meus "main section", meus blocos, não estão se ajustando como eu pensei que estariam.
+            </li>
         </ol>
     </div>
 
