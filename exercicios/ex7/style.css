@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: goldenrod;
+    margin: 15px 0 15px 0;
+}
+
+p.title{
+    width: 50vw;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 5px;
+    color: red;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: underline black;
+}
+
+form.proposta{
+    width: 60vw;
+    margin: auto;
+    border: solid goldenrod;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+form.exercicio{
+    width: 80vw;
+    margin: auto;
+    border: solid goldenrod;
+    padding: 20px;
+}
+
+div#resultado{
+    display: inline-block;
+    font-size: 1.2em;
+    width: 20vw;
+    margin-left: 10px;
+}
+
+footer.nota {
+    background-color: bisque;
+    padding: 5px 5px 5px 20px;
+    width: 50vw;
+    margin: auto;
+    margin-top: 15px;
+}
+

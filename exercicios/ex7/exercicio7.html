@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 7 - O campeão</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>EX 7 - O campeão</h1>
+
+    <p class="title">Proposta</p>
+
+    <form class="proposta">
+        <p>
+            O campeão
+            Construa uma aplicação que solicite nome e nota de diversas pessoas (1 até N) até que o usuário clique no botão
+            “Quem é o campeão”.
+            Exiba em tela o nome e a nota do campeão.
+            OBS.: Utilize métodos da Math API para solucionar o caso.
+        </p>
+    </form>
+
+    <p class="title">Exercício</p>
+
+    <form class="exercicio">
+        <label><input type="text" placeholder="Nome" id="nome"></label>
+        <label><input type="number" placeholder="Nota" id="nota"></label>
+        <input type="button" value="Adicionar participante" onclick="adicionarParticipante()">
+        <input type="button" value="Revelar campeão" onclick="quemCampeao()">
+        <div id="resultado"></div>
+    </form>
+
+    <footer class="nota">
+        <ol>
+            <li>JS: Tive problemas com o array e objeto, dificuldade muito alta para trabalhar com eles.</li>
+            <li>JS: Não vi motivos ou local apropriado para a aplicação da Math API.</li>
+        </ol>
+    </footer>
+
+</body>
+
+</html>
