@@ -22,7 +22,7 @@ p.title{
     text-decoration: underline black;
 }
 
-form.proposta{
+div.proposta{
     width: 60vw;
     margin: auto;
     border: solid goldenrod;

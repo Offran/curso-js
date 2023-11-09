@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 8 - Conversor de moedas</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>EX 8 - Conversor de moedas</h1>
+
+    <p class="title1">Proposta</p>
+    <p class="title2">Exercício</p>
+
+    <main>
+        <div class="proposta">
+            <p>
+                Conversor e formatador de moedas.<br>
+                Pesquise no Google o valor destas 3 moedas: <br>
+                - Dolar americano<br>
+                - Euro<br>
+                - Libra esterlina<br>
+                Peça que o usuário informe um valor em real (a ser convertido).<br>
+                Converta o valor para cada uma das moedas.<br>
+                Formate a exibição de acordo com padrão de cada moeda e apresente o resultado ao usuário.<br>
+                OBS.: Utilize métodos da Math API para solucionar o caso.<br>
+                OBS.2: Não esqueça de realizar as validações e apresentar os erros ao usuário.<br>
+            </p>
+        </div>
+
+        <form>
+            <label>Informe o valor em reais</label><input type="number" id="moeda">
+            <!-- <select id="">
+                <option value=""></option>
+                <option value="dolar" id="dolar">Dólar</option>
+                <option value="euro" id="euro">Euro</option>
+                <option value="libra" id="libra">Libra</option>
+            </select> -->
+            <input class="button" type="button" value="Converter" onclick="trocarMoeda()">
+            <p id="resposta"></p>
+        </form>
+    </main>
+
+    <div class="nota">
+        <ol>
+            <li>JS: Não consegui trabalhar com select e option.</li>
+            <li>JS: Tentei dificultar esse exercício de várias formas, mas não sei como usar a Math API.</li>
+            <li>JS: Só estou conseguindo usar try com if junto. Quando não faço com if parece faltar algo para dar
+                certo.</li>
+        </ol>
+    </div>
+</body>
+
+</html>

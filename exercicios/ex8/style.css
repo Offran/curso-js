@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(https://thumbs.dreamstime.com/z/pilha-de-dinheiro-grande-dólares-sobre-o-fundo-branco-40428510.jpg);
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    margin: 15px 0 0 15px;
+}
+
+main {
+    display: flex;
+    width: 90vw;
+    margin: auto;
+}
+
+p {
+    margin: 10px 0 0 10px;
+}
+
+p.title1, .title2{
+    display: inline-block;
+    width: 40vw;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.title1{
+    color: rgb(201, 21, 21);
+    text-shadow: 2px 2px 5px rgb(222, 51, 51), -0.5px -0.5px black, 0.5px 0.5px 0 black;
+    text-decoration: underline black;
+}
+
+.title2{
+    color: rgb(14, 113, 14);
+    text-shadow: 2px 2px 5px rgb(28, 142, 28), -0.5px -0.5px black, 0.5px 0.5px 0 black;
+    text-decoration: underline black;
+}
+
+div.proposta{
+    width: 35vw;
+    box-shadow: -1px 1px 10px 2px #d6d6d6;
+}
+
+div.nota{
+    background-color: bisque;
+    width: 55vw;
+    margin: auto;
+    margin-top: 5px;
+    padding: 5px 0px 5px 20px;
+}
+
+form {
+    margin: 0 0 0 10vw;
+    box-shadow: -1px 1px 10px 2px #d6d6d6;
+}
+
+label {
+    padding: 5px 5px 5px 5px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: rgb(255, 204, 0);
+    border: solid 2px rgb(255, 204, 0);
+}
+
+.button {
+    padding: 0 2px 0 2px;
+    margin: 10px 10px 10px 10px;
+}
+
+p#resposta{
+    text-align: center;
+}
