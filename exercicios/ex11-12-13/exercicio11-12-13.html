@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 11, 12 e 13 - palíndromo, balada e comparador</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h2>EX 11 - Verificar palíndromo</h2>
+
+    <section class="palindromo">
+        <p class="title" style="color: red">Propostas</p>
+        <p class="title" style="color: green">Exercícios</p>
+        <section id="ex11">
+            <div>
+                <p>Escreva um programa que solicita que um usuário digite uma palavra. <br>
+                    O programa deve verificar se a palavra digitada é um palíndromo ou não e apresentar o resultado.
+                    <br>
+                    Não se esqueça de fazer algumas validações.
+                </p>
+            </div>
+            <form>
+                <label>Escreva sua palavra:</label>
+                <input type="text" id="palavra">
+                <input class="button" type="button" value="Verificar palíndromo" onclick="verificarPalindromo()">
+                <p id="resposta"></p>
+            </form>
+        </section>
+        <div class="nota">
+            <ul>
+                <li>JS: Não encontrei método para achar um número no meio da palavra.</li>
+            </ul>
+        </div>
+    </section>
+
+    <h2>EX 12 - Porteiro de balada</h2>
+
+    <section class="porteiro-balada">
+        <p class="title" style="color: red">Propostas</p>
+        <p class="title" style="color: green">Exercícios</p>
+        <section id="ex12">
+            <div>
+                <p>Escreva um programa que simule um porteiro de balada para maiores de idade (18+). <br>
+                    Você deve solicitar o nome e a data de nascimento de uma pessoa, verificar se ela pode entrar na
+                    festa e
+                    apresentar o resultado. <br>
+                    OBS.: Embora exista um objeto para trabalhar com datas no Javascript, ainda não estudamos. Por hora
+                    resolva
+                    este problema utilizando os tipos primitivos estudados.
+                </p>
+            </div>
+            <form>
+                <label>Digite seu nome e sua data de nascimento para entrar na balada:</label>
+                <input type="text" id="nome" placeholder="Franco">
+                <input type="text" id="data" placeholder="Exemplo: 31/12/2000" maxlength="10" oninput="mascara()">
+                <input class="button" type="button" value="Entrar" onclick="entrarBalada()">
+                <br>
+                <p id="resposta2"></p>
+                <p id="respostaIdade"></p>
+            </form>
+        </section>
+        <div class="nota">
+            <ul>
+                <li>JS: Meu input type="date" não foi lido, mas tentei pouco.</li>
+                <li>JS: Não consegui fazer máscara para a data, aqui eu tentei muito.</li>
+                <li>CSS: Não consegui </li>
+            </ul>
+        </div>
+    </section>
+
+    <h2>EX 13 - Comparador Insensitive</h2>
+
+    <section class="comparador">
+        <p class="title" style="color: red">Propostas</p>
+        <p class="title" style="color: green">Exercícios</p>
+        <section id="ex13">
+            <div>
+                <p>Escreva um programa que receba 2 textos digitados e compare eles informando se são equivalentes ou
+                    não. <br>
+                    Detalhe: este seu comparador deve ser case-insensitive e não considerar acentos, por exemplo: <br>
+                    1. “mar” deve ser considerado igual a “MAR” ou “Mar” ou “mAr”, etc. <br>
+                    2. “táxi” deve ser considerado igual a “taxi” ou “TÁXI” ou “TaXi” ou “tÁxi”, etc.
+                </p>
+            </div>
+            <form>
+                <label>Escreva suas palavras para comparar:</label> <br>
+                <input type="text" id="palavra1">
+                <input type="text" id="palavra2">
+                <input class="button" type="button" value="Comparar" onclick="comparar()">
+                <p id="resposta3"></p>
+            </form>
+        </section>
+        <div class="nota">
+            <ul>
+                <li>JS: Percebi a inabilidade em colocar mensagens específicas chamando funções, me sinto muito travado quando as chamo, isso já é desde o exercício anterior.</li>
+            </ul>
+        </div>
+    </section>
+
+</body>
+
+</html>
